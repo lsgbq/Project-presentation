@@ -1,0 +1,63 @@
+.sa-modal,
+.update-cover {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #000;
+    opacity: .4;
+    z-index: 999;
+}
+
+.sa-container {
+    display: none;
+    position: fixed;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 300px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.sa-title {
+    padding: 10px;
+    text-align: center;
+    border-bottom: solid 1px #ccc;
+}
+
+.sa-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.sa-delete-btn,
+.sa-confirm-btn,
+.sa-quit-btn {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #337ab7;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.sa-delete-btn {
+    margin: 5px;
+    width: calc(100% - 10px);
+    height: 30px;
+}
+
+.sa-confirm-btn,
+.sa-quit-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40%;
+    height: 30px;
+    margin: 5px 5%;
+}

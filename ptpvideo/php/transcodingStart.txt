@@ -1,0 +1,1 @@
+ffmpeg.exe -hwaccel qsv -c:v h264_qsv -i "./video/mild-736.avi" -c:v h264_qsv -c:a copy -strict -2 -y "./video/mild-736.mp4"

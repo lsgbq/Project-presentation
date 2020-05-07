@@ -1,0 +1,582 @@
+*{margin:0;padding:0}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.login{
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+}
+
+.loginBg{
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.logBox{
+    position:absolute;
+    top: 30vh;
+}
+
+.logBox input{
+    width: 80vw;
+    height: 10vh;
+    line-height: 6vh;
+    font-size: 4vh;
+    margin: 0 0 6vh 10vw;
+    opacity: 0.6;
+}
+
+.logBox div{
+    width: 80vw;
+    height: 10vh;
+    margin: 0 0 6vh 10vw;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 4vh;
+    color: white;
+    background-color: #0173c9;
+    opacity: 0.9;
+}
+
+.mainButton{
+    height: 10vh;
+    width: 80vw;
+    margin: 35vh 10vw 55vh 10vw;
+    line-height: 10vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.itemFile{
+    width: 97vw;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: left;
+    font-size: 3vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background: #86c7ff;
+    color: #5f84a8;
+    border: 1px #d7edff solid;
+    border-radius: 5px;
+    margin: 0 0 1vw 1vw;
+    box-shadow:5px 5px 10px gray;
+    background: -webkit-linear-gradient(left,#d7edff, #a7d6ff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,#d7edff, #a7d6ff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,#d7edff, #a7d6ff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,#d7edff, #a7d6ff); /* 标准的语法（必须放在最后） */
+}
+
+.wait{
+    position: absolute;
+    z-index: 1000;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: #5f84a8;
+    filter:alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.waitTip{
+    height: 10vh;
+    width: 80vw;
+    margin: 35vh 10vw 55vh 10vw;
+    line-height: 10vh;
+    font-size: 6vh;
+    text-align: center;
+    background: white;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+}
+
+.fileTbody{
+    height: 80vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.botton{
+    height: 10vh;
+    width: 100vw;
+    background: #eeeeee;
+}
+
+.bottonDiv{
+    height: 10vh;
+    width: calc(1/4 * 100vw);
+    float: left;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 4vh;
+    cursor:pointer;
+}
+
+.imageBlock{
+    overflow: hidden;
+}
+
+.imageBox{
+    height: 80vh;
+}
+
+.image{
+    height: 80vh;
+    width: 100vw;
+    vertical-align:middle;
+    object-fit: contain;
+}
+
+.video{
+	width: 100vw;
+	height: calc(0.5625 * 100vw);
+    object-fit: contain;
+    -webkit-filter:brightness(100%);
+    filter:brightness(100%);
+}
+
+video::cue{
+    background-color:transparent;
+    /*白字*/
+    color: white;
+    /*黑边*/
+    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000;
+    font-size: 3vw;
+    line-height: 4vw;
+}
+
+.selectSubtitle{
+    width: 100vw;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    font-size: 4vh;
+    background: #eeeeee;
+    border-bottom: 1px solid white;
+    cursor:pointer;
+}
+
+.thumbDiv{
+    width: 100vw;
+    height: 18vh;
+    border: 1px solid #eeeeee;
+}
+
+.thumb{
+    width: 48vw;
+    height: 16vh;
+    margin: 1vh 1vw;
+    object-fit: contain;
+    float: left;
+}
+
+.thumbText{
+    width: 48vw;
+    height: 16vh;
+    margin: 1vh 1vw;
+    line-height: calc(1 / 3 * 16vh);
+    font-size: 3vh;
+    word-wrap:break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoAndControls{
+    width: 100vw;
+    height: calc(1080/1920 * 100vw);
+    position:relative;
+}
+
+.v{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+
+.myControls{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 8888;
+}
+
+.controlsFullBar{
+    float: left;
+    margin: 2vw 0 0 1vw;
+    width: 10vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    background: black;
+    border-radius: 2vw;
+    opacity:0.6;
+}
+
+.controlsFull{
+    margin-left: 3vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    width: 4vw;
+    object-fit: contain;
+}
+
+.brightDiv{
+    margin: calc(1080/1920 * 50vw - 10vw) 0 0 40vw;
+    width: 20vw;
+    height: 20vw;
+    opacity:0.6;
+    background-color: black;
+}
+
+.bright{
+    margin: 2vw 0 1vw 5vw;
+    width: 10vw;
+    height: 10vw;
+    object-fit: contain;
+}
+
+.brightPercent{
+    width: 20vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+}
+
+.controlsBar{
+    background: black;
+    width: 98vw;
+    height: calc(1080/1920 * 0.1 * 100vw);
+    margin: calc(1080/1920 * 0.87 * 100vw) 0 0 1vw;
+    border-radius: 2vw;
+    opacity:0.6;
+}
+
+.back{
+    margin-top: calc(1080/1920 * 0.02 * 100vw);
+    margin-left: 3vw;
+    height: calc(1080/1920 * 0.06 * 100vw);
+    float: left;
+}
+
+.pause{
+    margin-top: calc(1080/1920 * 0.02 * 100vw);
+    margin-left: 3vw;
+    height: calc(1080/1920 * 0.06 * 100vw);
+    float: left;
+}
+
+.forward{
+    margin-top: calc(1080/1920 * 0.02 * 100vw);
+    margin-left: 3vw;
+    height: calc(1080/1920 * 0.06 * 100vw);
+    float: left;
+}
+
+.nowPro{
+    height: calc(1080/1920 * 0.1 * 100vw);
+    width: 8vw;
+    float: left;
+    line-height: calc(1080/1920 * 0.1 * 100vw);
+    margin-left: 3vw;
+    margin-right: 1vw;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.dot{
+    position:absolute;
+    height: calc(1080/1920 * 0.1 * 100vw);
+    width: calc(1080/1920 * 0.04 * 100vw);
+    object-fit: contain;
+    z-index: 9999;
+}
+
+.oldProgress{
+    position:absolute;
+    margin-left: 1vw;
+    padding: calc(1080/1920 * 0.04 * 100vw) 0;
+    height: calc(1080/1920 * 0.02 * 100vw);
+    z-index: 9990;
+    width: 0;
+}
+
+.progress{
+    padding: calc(1080/1920 * 0.04 * 100vw) 0;
+    margin-left: 1vw;
+    height: calc(1080/1920 * 0.02 * 100vw);
+    width: 45vw;
+    float: left;
+}
+
+.morePro{
+    height: calc(1080/1920 * 0.1 * 100vw);
+    width: 8vw;
+    float: left;
+    line-height: calc(1080/1920 * 0.1 * 100vw);
+    margin-left: 2vw;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.funcDiv{
+    height: calc(1080/1920 * 0.1 * 100vw);
+    margin-left: 2vw;
+    float: left;
+    width: 8vw;
+    text-align: center;
+}
+
+.fun{
+    margin-top: calc(1080/1920 * 0.025 * 100vw);
+    height: calc(1080/1920 * 0.05 * 100vw);
+    width: 8vw;
+    line-height: calc(1080/1920 * 0.05 * 100vw);
+    font-size: 1.5vw;
+    color: white;
+    border: 0.1vw solid white;
+    border-radius: 3vw;
+    z-index: 9999;
+}
+
+.functionList{
+    position: absolute;
+    top: calc(1080/1920 * 0.16 * 100vw);
+    right: 1vw;
+    height: calc(1080/1920 * 0.7 * 100vw);
+    width: 17vw;
+    background-color: black;
+}
+
+.listHead{
+    width: 17vw;
+}
+
+.listHead div{
+    width: 17vw;
+    height: calc(1080/1920 * 0.15 * 100vw);
+    line-height: calc(1080/1920 * 0.15 * 100vw);
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+}
+
+.speed{
+    background-color: black;
+    width: 17vw;
+    border: 0.1vw solid white;
+}
+
+.speed div{
+    width: 17vw;
+    height: calc(1080/1920 * 0.078 * 100vw);
+    line-height: calc(1080/1920 * 0.078 * 100vw);
+    font-size: 3vw;
+    color: white;
+}
+
+.speedX{
+    margin: calc(-1080/1920 * 0.08 * 100vw) 0 0 -29vw;
+}
+
+.speedXText{
+    width: 14vw;
+    height: calc(1080/1920 * 0.08 * 100vw);
+    line-height: calc(1080/1920 * 0.08 * 100vw);
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    vertical-align: middle;
+}
+
+.speedXSubmit{
+    width: 14vw;
+    height: calc(1080/1920 * 0.08 * 100vw);
+    line-height: calc(1080/1920 * 0.08 * 100vw);
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-left: -1vw;
+    vertical-align: middle;
+}
+
+.backPlay div{
+    width: 17vw;
+    height: calc(1080/1920 * 0.2 * 100vw);
+    line-height: calc(1080/1920 * 0.2 * 100vw);
+    font-size: 3vw;
+    color: white;
+}
+
+.systemTip{
+    float: left;
+    width: 22vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    margin: 2vw 0 0 28vw;
+    border-radius: 2vw;
+}
+
+.tipTime{
+    float: left;
+    width: 6vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    line-height: calc(1080/1920 * 0.12 * 100vw);
+    margin-right: 2vw;
+    font-size: 3vw;
+    color: white;
+    text-align: center;
+}
+
+.tipPower{
+    float: left;
+    width: 14vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    line-height: calc(1080/1920 * 0.12 * 100vw);
+    font-size: 3vw;
+    color: white;
+    text-align: center;
+}
+
+.power{
+    float: left;
+    width: 8vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    line-height: calc(1080/1920 * 0.12 * 100vw);
+    font-size: 3vw;
+    color: white;
+    text-align: right;
+}
+
+.powerImg{
+    float: left;
+    width: 6vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    object-fit: contain;
+}
+
+.powerBg{
+    position: absolute;
+    height: calc(1080/1920 * 0.12 * 0.4 * 0.76 * 100vw);
+    width: calc(0.82 * 6vw);
+    margin: calc(1080/1920 * 0.12 * 0.34 * 100vw) 0 0 calc(-0.46 * 6vw);
+    z-index: -1;
+}
+
+.volBar{
+    float: left;
+    background: black;
+    width: 28vw;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    margin: 2vw 0 0 10vw;
+    border-radius: 2vw;
+    opacity: 0.6;
+}
+
+.volDot{
+    position:absolute;
+    height: calc(1080/1920 * 0.12 * 100vw);
+    width: calc(1080/1920 * 0.04 * 100vw);
+    margin-left: calc(25/260 * 28vw - 1vw);
+    object-fit: contain;
+    z-index: 9999;
+}
+
+.volNowProgress{
+    position:absolute;
+    margin-left: calc(25/260 * 28vw);
+    padding: calc(1080/1920 * 0.05 * 100vw) 0;
+    height: calc(1080/1920 * 0.02 * 100vw);
+    z-index: 9990;
+    width: 0;
+}
+
+.volAllProgress{
+    margin-left: calc(25/260 * 28vw);
+    padding: calc(1080/1920 * 0.05 * 100vw) 0;
+    height: calc(1080/1920 * 0.02 * 100vw);
+    width: calc(155/260 * 28vw);
+}
+
+.volImg{
+    margin-left: calc(15/260 * 28vw);
+    height: calc(1080/1920 * 0.12 * 100vw);
+    width: calc(40/260 * 28vw);
+    object-fit: contain;
+}
+
+.transCodingSel{
+    width: 80vw;
+    height:50vh;
+    position: absolute;
+    z-index: 1002;
+    top:15vh;
+    left:10vw;
+    background: #eeeeee;
+    border: 1vw solid #a7d6ff;
+    border-radius: 1vw;
+    filter:alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 1;
+}
+
+.codeTransExplain{
+    width: 80vw;
+    height: 22vh;
+    font-size: 3vh;
+    text-align: left;
+	line-height: 5vh
+}
+
+.codeTransTop{
+    width: 78vw;
+    height: 8vh;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 8vh;
+    border-left: 1vw solid white;
+    border-right: 1vw solid white;
+    border-top: 1vh solid white;
+    background: #a7d6ff;
+}
+
+.codeTransBottom{
+    width: 78vw;
+    height: 8vh;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 8vh;
+    border-left: 1vw solid white;
+    border-right: 1vw solid white;
+    border-top: 1vh solid white;
+    border-bottom: 1vh solid white;
+    background: #a7d6ff;
+}
+
+.transCodingwait{
+    position: absolute;
+    z-index: 1001;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.0;
+    filter:alpha(Opacity=80);
+    -moz-opacity: 0.5;
+}

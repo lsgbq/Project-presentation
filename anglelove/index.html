@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱心基金</title>
+    <link rel="stylesheet" href="./public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/style/sa.css">
+    <link rel="stylesheet" href="./public/style/main.css">
+</head>
+<body>
+    <header class="page-head">
+        <span id="title">天使基金</span>
+        <span id="back"><a href="./back.html" target="_blank">后台</a></span>
+    </header>
+
+    <section id="operator">
+        <ul class="nav nav-tabs" id="navs">
+            <li role="presentation" class="active" data-panel="#search-pay-info"><a href="#">查询缴费信息</a></li>
+            <li role="presentation" data-panel="#search-help-info"><a href="#">查询补助信息</a></li>
+        </ul>
+        <div id="search-pay-info" class="nav-panel panel-action">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="0">全部分工会</option>
+                    <option value="1">信息工程学院</option>
+                    <option value="2">资源与环境学院</option>
+                    <option value="3">外语外贸学院</option>
+                    <option value="4">文法学院</option>
+                    <option value="5">理学院</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="name">姓名</label>
+                <input type="text" class="form-control af-form" id="name" placeholder="姓名(可为空)">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">身份证号</label>
+                <input type="text" class="form-control af-form" id="personid" placeholder="输入身份证号">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="year">年份</label>
+                <input type="text" class="form-control af-form" id="year" placeholder="年份 例如‘2008’ 若不填默认为今年">
+            </div>
+            <button class="btn btn-primary af-btn" id="check-pay">查询</button>
+            <section id="display">
+                <table class="table table-striped" id="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>分工会</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>身份证号</th>
+                            <th>缴费金额</th>
+                            <th>是否补缴</th>
+                            <th>年份</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div id="search-help-info" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">选择分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="00">请选择分工会</option>
+                    <option value="01">信息工程学院</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="name">姓名</label>
+                <input type="text" class="form-control af-form" id="name" placeholder="姓名(可为空)">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">身份证号</label>
+                <input type="text" class="form-control af-form" id="personid" placeholder="输入身份证号">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="year">年份</label>
+                <input type="text" class="form-control af-form" id="year" placeholder="年份 例如‘2008’ 若不填默认为今年">
+            </div>
+            <button class="btn btn-primary af-btn" id="check-help">查询</button>
+            <section id="display">
+                <table class="table table-striped" id="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>分工会</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>身份证号</th>
+                            <th>补助年份</th>
+                            <th>补助信息</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </section>
+
+    <script src="./src/jquery-3.1.1.min.js"></script>
+    <script src="./src/sa.js"></script>
+    <script src="./src/al.js"></script>
+</body>
+
+</html>

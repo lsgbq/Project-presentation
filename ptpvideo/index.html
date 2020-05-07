@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="CN">
+<head>
+    <link rel=stylesheet type="text/css" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <title id="title">开启观看电脑视频之旅</title>
+</head>
+<body>
+    <div id="startDiv" class="hide">
+        <input id="startButton" type="submit" class="mainButton" value="开启观看电脑视频之旅">
+    </div>
+    <!--登录-->
+    <div id="login" class="login">
+        <img id="loginBg" class="loginBg" src="./picture/bg.jpg">
+        <div class="logBox">
+            <input type="text" id="username" placeholder="用户名" />
+            <input type="password" id="password" placeholder="密码" />
+            <div id="loginButton">登　　录</div>
+        </div>
+    </div>
+    <!--文件列表-->
+    <div id="fileDiv" class="hide">
+        <div id="fileTbody" class="fileTbody"></div>
+    </div>
+    <!--视频-->
+    <div id="videoDiv" class="hide">
+        <div id="fullTbody" class="fileTbody">
+            <div id="videoAndControls" class="videoAndControls">
+                <div id="v" class="v">
+                    <video class="video" id="video" src="" poster="" preload="metadata" playsinline="playsinline">
+                        <track id="cnSubt" src="" srclang="zh-cn" label="简体中文" kind="captions" default>
+                        您的浏览器不支持。
+                    </video>
+                    <audio id="audio" src="" type="audio/mp3"></audio>
+                </div>
+                <div id="myControls" class="myControls">
+                    <div class="controlsFullBar" id="fullScreenBar">
+                        <img class="controlsFull" src="./picture/fullScreen.png" />
+                    </div>
+                    <div id="systemTip" class="systemTip">
+                        <div id="tipTime" class="tipTime">00:00</div>
+                        <div class="tipPower">
+                            <div id="power" class="power">100%</div>
+                            <img id="powerBg" class="powerBg" src="./picture/powerBg.png" />
+                            <img id="powerImg" class="powerImg" src="./picture/power.png" />
+                        </div>
+                    </div>
+                    <div id="volBar" class="volBar">
+                        <img id="volDot" class="volDot" src="picture/dot.png" />
+                        <img id="volNowProgress" class="volNowProgress" src="picture/oldProgress.png" />
+                        <img id="volAllProgress" class="volAllProgress" src="picture/progress.png" />
+                        <img id="volImg" class="volImg" src="picture/minVolume.png" />
+                    </div>
+                    <div id="controlsBar" class="controlsBar">
+                        <img id="progressBack" class="back" src="picture/back.png" />
+                        <img id="pause" class="pause" src="picture/start.png" />
+                        <img id="progressPre" class="forward" src="picture/forward.png" />
+                        <div id="nowPro" class="nowPro">00:00</div>
+                        <img id="dot" class="dot" src="picture/dot.png" />
+                        <img id="oldProgress" class="oldProgress" src="picture/oldProgress.png" />
+                        <img id="progress" class="progress" src="picture/progress.png" />
+                        <div id="morePro" class="morePro">00:00</div>
+                        <div id="funcDiv" class="funcDiv">
+                            <div id="fun" class="fun">功能</div>
+                            <div id="functionList" class="hide">
+                                <div id="listHead" class="hide">
+                                    <div id="speed">　倍　　速</div>
+                                    <div id="backstage">　后台播放</div>
+                                    <div id="listPlay">□列表播放</div>
+                                    <div id="subtitleShow">☑字　　幕</div>
+                                </div>
+                                <div id="speedSelect" class="hide">
+                                    <div id="globalSpeed">□全局</div>
+                                    <div id="speed05">0.5X</div>
+                                    <div id="speed07">0.7X</div>
+                                    <div id="speed10">1.0X</div>
+                                    <div id="speed12">1.2X</div>
+                                    <div id="speed15">1.5X</div>
+                                    <div id="speed17">1.7X</div>
+                                    <div id="speed20">2.0X</div>
+                                    <div id="speedX">
+                                        自定义
+                                        <div id="customSpeed" class="hide">
+                                            <input type='number' pattern="[0-9]*" id="speedXText" class="speedXText" placeholder="1.0" />
+                                            <input type="submit" id="speedSubmit" value="确定" class="speedXSubmit" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="backPlayList" class="hide">
+                                    <div id="backPlay">□后台播放</div>
+                                    <div id="againTime">重新校准</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="brightDiv" class="hide">
+                        <img id="bright" class="bright" src="./picture/bright.png" />
+                        <div id="brightPercent" class="brightPercent">100</div>
+                    </div>
+                </div>
+            </div>
+            <div class="selectSubtitle" id="subtitle">选择字幕</div>
+            <div class="selectSubtitle" id="controlType">使用原生控制条</div>
+            <div class="selectSubtitle" id="10bithevcTo8bitx264">10bitHevc转8bitx264</div>
+        </div>
+    </div>
+    <!--字幕-->
+    <div id="subtitleDiv" class="hide">
+        <div id="subtitleTbody" class="fileTbody"></div>
+    </div>
+    <!--图片-->
+    <div id="imgDiv" class="hide">
+        <div class="imageBlock">
+            <div id="imageBox" class="imageBox">
+                <!--<img src="" id="image" class="image"/>-->
+            </div>
+        </div>
+        <!--<div id="prior">上一张</div>
+        <div id="next">下一张</div>-->
+    </div>
+    <!--历史-->
+    <div id="history" class="hide">
+        <div id="historyTbody" class="fileTbody"></div>
+    </div>
+    <!--功能-->
+    <div id="function" class="hide">
+        <div id="functionTbody" class="fileTbody">
+            <div id="closePC" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">关机</div>
+            </div>
+            <div id="logout" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">退出登录</div>
+            </div>
+            <div id="transcoding" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">带字幕转码</div>
+            </div>
+            <div id="download" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">下载</div>
+            </div>
+            <div id="explain" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">说明</div>
+            </div>
+            <div id="clearHistory" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">清空历史记录</div>
+            </div>
+            <div id="deleteUseRecode" class="thumbDiv">
+                <img class="thumb" src="./picture/disk.png" />
+                <div class="thumbText">删除使用记录</div>
+            </div>
+        </div>
+    </div>
+    <!--转码选择-->
+    <div id="transCodingSel" class="hide">
+        <div class="transCodingwait"></div>
+        <div class="transCodingSel">
+            <div class="codeTransExplain">说明：快速转码能在一两分钟内将非MP4文件转为MP4，但部分视频格式不支持；慢速转码可以转码任何视频格式，但转码时间可能很长。</div>
+            <div class="codeTransTop" id="fastCode">快速转码</div>
+            <div class="codeTransTop" id="slowCode">慢速转码</div>
+            <div class="codeTransBottom" id="concel">取消操作</div>
+        </div>
+    </div>
+    <!--等待-->
+    <div id="wait" class="hide">
+        <div class="wait"></div>
+        <div class="waitTip">等待中</div>
+    </div>
+    <!--底部按钮-->
+    <div id="botton" class="hide">
+        <div id="mainPage" class="bottonDiv">主页</div>
+        <div id="functionPage" class="bottonDiv">功能</div>
+        <div id="historyPage" class="bottonDiv">历史</div>
+        <div id="playPage" class="bottonDiv">播放</div>
+    </div>
+    <div class="hide" id="hide"></div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/subtitle.js"></script>
+</html>

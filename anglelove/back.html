@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台</title>
+    <link rel="stylesheet" href="./public/style/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/style/sa.css">
+    <link rel="stylesheet" href="./public/style/main.css">
+</head>
+
+<body>
+    <header class="page-head">
+        <span id="title">天使基金</span>
+    </header>
+    <section id="main">
+        <ul class="nav nav-tabs" id="navs">
+            <li role="presentation" class="active" data-panel="#upload-excel"><a href="#">上传缴费表格</a></li>
+            <li role="presentation" data-panel="#add-new-member"><a href="#">添加新会员</a></li>
+            <li role="presentation" data-panel="#insert-help"><a href="#">插入补助信息</a></li>
+            <li role="presentation" data-panel="#update-member"><a href="#">修改会员信息</a></li>
+            <li role="presentation" data-panel="#delete-department"><a href="#">删除分工会</a></li>
+            <li role="presentation" data-panel="#add-department"><a href="#">添加分工会</a></li>
+			<li role="presentation" data-panel="#update-department"><a href="#">修改分工会</a></li>
+            <li role="presentation" data-panel="#update-person-id"><a href="#">修改删除会员信息</a></li>
+        </ul>
+
+        <div id="upload-excel" class="nav-panel panel-action">
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">选择表格</label>
+                <input type="file" class="form-control-file af-form" id="upload-file">
+            </div>
+            <button class="btn btn-primary af-btn">确定上传</button>
+        </div>
+
+        <div id="add-new-member" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">选择分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="00">请选择分工会</option>
+                    <option value="01">信息工程学院</option>
+                    <option value="02">资源与环境学院</option>
+                    <option value="03">外语外贸学院</option>
+                    <option value="04">文法学院</option>
+                    <option value="05">理学院</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="name">输入姓名</label>
+                <input type="text" class="form-control af-form" id="name" placeholder="姓名">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">输入身份证号</label>
+                <input type="text" class="form-control af-form" id="personid" placeholder="身份证号">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="sex">输入姓别</label>
+                <select class="form-control af-form" id="sex">
+                    <option value="0">输入性别</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="pay-num">输入金额</label>
+                <input type="text" class="form-control af-form" id="pay-num" placeholder="金额">
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="year">输入年份</label>
+                <input type="text" class="form-control af-form" id="year" placeholder="不填默认为今年">
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="afterpayment">是否补缴</label>
+                <select class="form-control af-form" id="afterpayment">
+                    <option value="1">否</option>
+                    <option value="2">是</option>
+                </select>
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="pay-note">输入备注</label>
+                <input type="text" class="form-control af-form" id="pay-note" placeholder="不填默认为空">
+            </div>
+            <button class="btn btn-primary af-btn">确定</button>
+        </div>
+
+        <div id="insert-help" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">输入身份证号</label>
+                <input type="text" class="form-control af-form" id="personid" placeholder="身份证号">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="help-info">补助信息</label>
+                <input type="text" class="form-control af-form" id="help-info" placeholder="填写补助信息">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="year">输入年份</label>
+                <input type="text" class="form-control af-form" id="year" placeholder="年份(为空默认为今年)">
+            </div>
+            <button class="btn btn-primary af-btn">确定</button>
+        </div>
+
+        <div id="update-member" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">选择分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="00">请选择分工会</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="name">输入姓名</label>
+                <input type="text" class="form-control af-form" id="name" placeholder="姓名">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="personid">输入身份证号</label>
+                <input type="text" class="form-control af-form" id="personid" placeholder="身份证">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="year">输入年份</label>
+                <input type="text" class="form-control af-form" id="year" placeholder="年份(为空默认为今年)">
+            </div>
+            <div class="input-wrapper">
+                <label class="af-label" for="year">查看补助信息</label>
+                <select class="form-control af-form" id="check-help">
+                    <option value="0">否</option>
+                    <option value="1">是</option>
+                </select>
+            </div>
+            <button class="btn btn-primary af-btn update-member-btn">查找</button>
+
+            <table style="margin-top: 50px;" class="table table-striped" id="table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn btn-success af-btn change-some-department">分工会变动</button>
+        </div>
+
+        <div id="delete-department" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">选择分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="00">请选择分工会</option>
+                </select>
+            </div>
+            <button class="btn btn-primary af-btn">删除</button>
+        </div>
+
+        <div id="add-department" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="depname">输入添加分工会名称</label>
+                <input type="text" class="form-control af-form" id="depname">
+            </div>
+            <button class="btn btn-primary af-btn">添加</button>
+        </div>
+
+        <div id="update-person-id" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">修改（删除）会员身份证</label>
+                <input type="text" class="form-control af-form" id="old-person-id"/>
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="institute">正确会员身份证</label>
+                <input type="text" class="form-control af-form" id="new-person-id"/>
+            </div>
+            <button class="btn btn-primary af-btn">转移</button>
+        </div>
+
+		<div id="update-department" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">选择分工会</label>
+                <select class="form-control af-form real-institute" id="institute">
+                    <option value="00">请选择分工会</option>
+                    <option value="01">信息工程学院</option>
+                </select>
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="institute">分工会新名称</label>
+                <input type="text" class="form-control af-form" id="dep-new-name">
+            </div>
+            <button class="btn btn-primary af-btn">修改</button>
+        </div>
+
+        <div id="update-person-id" class="nav-panel">
+            <div class="input-wrapper">
+                <label class="af-label" for="institute">会员错误身份证</label>
+                <input type="text" class="form-control af-form" id="old-person-id"/>
+            </div>
+			<div class="input-wrapper">
+                <label class="af-label" for="institute">会员正确身份证</label>
+                <input type="text" class="form-control af-form" id="new-person-id"/>
+            </div>
+            <button class="btn btn-primary af-btn">转移</button>
+        </div>
+
+        <div class="update-modal hide">
+            <div class="update-cover"></div>
+            <div id="update-text">
+                <header class="update-title">
+                    修改信息
+                </header>
+                <div>
+                    <label>姓名</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div>
+                    <label>性别</label>
+                    <input type="text" class="form-control" id="sex">
+                </div>
+                <div>
+                    <label>身份证</label>
+                    <input type="text" class="form-control" id="personid">
+                </div>
+                <div>
+                    <label>缴费金额</label>
+                    <input type="text" class="form-control" id="pay-num">
+                </div>
+                <div>
+                    <label>是否补缴</label>
+                    <input type="text" class="form-control" id="pay-com">
+                </div>
+                <div>
+                    <label>缴费年份</label>
+                    <input type="text" class="form-control" id="pay-date">
+                </div>
+                <div>
+                    <label>备注</label>
+                    <input type="text" class="form-control" id="pay-note">
+                </div>
+                <input type="hidden" id="confirm-id">
+                <div>
+                    <button class="btn btn-primary update-confirm">
+                        修改
+                    </button>
+                    <button class="btn btn-warning update-quit">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="update-help-modal hide">
+            <div class="update-cover"></div>
+            <div id="update-text">
+                <header class="update-title">
+                    修改信息
+                </header>
+                <div>
+                    <label>补助年份</label>
+                    <input type="text" class="form-control" id="help-date">
+                </div>
+                <div>
+                    <label>补助信息</label>
+                    <input type="text" class="form-control" id="help-note">
+                </div>
+                <input type="hidden" id="confirm-id"/>
+                <div>
+                    <button class="btn btn-primary update-confirm">
+                        修改
+                    </button>
+                    <button class="btn btn-warning update-quit">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="update-modal-department hide">
+                <div class="update-cover"></div>
+                <div id="update-text">
+                    <header class="update-title">
+                        人员所属分工会变动
+                    </header>
+                    <div>
+                        <label>人数</label>
+                        <span id="person-num"></span>
+                    </div>
+                    <div>
+                        <label>目标分工会</label>
+                        <select style="margin-bottom: 14px;width: 80%;" class="form-control real-institute" id="institute">
+                            <option value="00">请选择分工会</option>
+                            <option value="01">信息工程学院</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary update-department-btn">
+                            修改
+                        </button>
+                        <button class="btn btn-warning update-quit">
+                            取消
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="./src/jquery-3.1.1.min.js"></script>
+    <script src="./src/sa.js"></script>
+    <script src="./src/back.js"></script>
+</body>
+</html>

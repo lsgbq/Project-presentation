@@ -1,0 +1,197 @@
+.page-head {
+    height: 48px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+    display: none;
+}
+
+#back {
+    float: right;
+    line-height: 48px;
+    margin-right: 100px;
+    cursor: pointer;
+
+}
+
+#back:hover {
+    color: #337ab7;;
+}
+
+#title {
+    margin-left: 40px;
+    width: 30%;
+    line-height: 48px;
+    text-align: center;
+}
+
+#operator {
+    width: 80%;
+    margin: 50px auto 0 auto;
+    font-size: 2rem;
+}
+
+#display {
+    /*display: none;*/
+    position: relative;
+    width: 90%;
+    margin: 50px auto 0 auto;
+    font-size: 1.8rem;
+}
+
+#institute {
+    width: 100%;
+}
+
+.af-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.af-btn {
+    display: block;
+    padding: 10px 20px;
+    margin: 30px auto 0 auto;
+}
+
+.af-label {
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
+
+.input-wrapper {
+    display: inline-block;
+    margin: 0 30px 20px 30px;
+    width: 20%;
+}
+
+#main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#total {
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+/* back*/
+
+#navs {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#navs > .active > a {
+    color: #fff;
+    background-color: #337ab7;
+    border: 0;
+}
+
+.nav-panel {
+    display: none;
+}
+
+.panel-action {
+    display: block;
+}
+
+#update-text {
+    position: fixed;
+    box-sizing: content-box;
+    padding: 20px;
+    width: 350px;
+    left: calc(50% - 170px);
+    top: 50px;
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    z-index: 9999;
+}
+
+#update-text > .update-title {
+    margin: 0 -20px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px;
+    text-align: center;
+}
+
+#update-text > div:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#update-text label {
+    box-sizing: border-box;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+}
+
+#update-text input {
+    box-sizing: border-box;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+#update-text button {
+    margin: 10px 0 0 50px;
+}
+
+.table-delete,
+.table-update {
+    margin:0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#table {
+    margin-bottom: 20px;
+}
+
+#table > tbody > tr:hover {
+    opacity: .7;
+}
+
+#table > tbody > tr > th {
+    min-width: 40px;
+    max-width: 200px;
+    vertical-align: middle;
+}
+
+.mock-checkbox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.mock-checkbox > span {
+    display: none;
+    font-size: 20px;
+}
+
+.mock-checkbox.checked > span {
+    display: inline;
+}
+
+#update-member .change-some-department {
+    display: none;
+    margin-bottom: 50px;
+}
+
+#person-num {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 18px;
+}
